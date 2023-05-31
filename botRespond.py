@@ -30,6 +30,11 @@ def getResponse(sendMsg):
                     exactReply.append(botReply)
                     print("Likely match: " + userText)
                     print("Match is: " + str(checkMatch))
+                elif checkMatch >= 0.8:
+                    successCount += 1
+                    comeBacks.append(botReply)
+                    print("Possible match: " + userText)
+                    print("Match is: " + str(checkMatch))    
                 elif checkMatch >= 0.65:
                     successCount += 1
                     comeBacks.append(botReply)
