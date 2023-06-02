@@ -1,10 +1,15 @@
 Changelogs
+v4
+Changed the Username to You
+Added Background
+
 v3
 502 datasets total
 
 v2
 added another elif checkMatch >= 0.8:
 235 datasets total
+
 v1
 Changed the bot name to IBot
 80 datasets total

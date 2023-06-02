@@ -12,6 +12,9 @@
         .card-container {
             display: flex;
             justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
             align-items: center;
             height: 100vh;
         }
@@ -43,7 +46,7 @@
     <title>IBOT</title>
 </head>
 <body onload="bot_greet('Hello');">
-    <div class="container-fluid card-container p-10" style="background-color:lightgray">
+    <div class="container-fluid card-container p-10" style="background-image: url('{{ url_for('static', filename='bg.png') }}')">
         <div class="card">
             <div class="card-header font-weight-bold">
                 IBOT
@@ -76,7 +79,7 @@
         $('#send-btn').click(function() {
             var text = $('#chat-input').val();
             rawText = text; 
-            $('.chatbox').append('<div class="chat-response-wrapper border border-success"><p> <span class="font-weight-bold">Username </span> <span class="text-sm text-secondary" style="font-size: 0.60rem">10:35 AM</span></p><p>' + text + '</p></div>');
+            $('.chatbox').append('<div class="chat-response-wrapper border border-success"><p> <span class="font-weight-bold">You </span> <span class="text-sm text-secondary" style="font-size: 0.60rem">10:35 AM</span></p><p>' + text + '</p></div>');
             $('#chat-input').val('');
 
             // Scroll to the bottom
